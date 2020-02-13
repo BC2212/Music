@@ -1,0 +1,84 @@
+body {
+    background: url(../media/image/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    background-attachment: fixed;
+}
+
+/* -------------------------- */
+
+.blackscreen {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.content-wrapper {
+    transform: translate(0, 50%);
+}
+
+.thumbnail {
+    margin: auto;
+    width: 40%;
+    border: 5px solid #fff;
+    animation-name: rotate;
+    animation-duration: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.slider-wrap {
+    width: 50%;
+    margin-top: 10px;
+    position: relative;
+    margin: 15px auto;
+}
+
+.slider {
+    border: 1px solid #333 #333 #777 #333;
+    width: 100%;
+    height: 5px;
+    background: rgba(224, 103, 103, 1);
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+}
+
+.ui-slider-handle {
+    position: absolute;
+    z-index: 222;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    background: url(../media/icon/dragon-solid.svg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stop {
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    background-image: url(../media/icon/stop-circle-regular.svg);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.stop:active {
+    transform: scale(0.9);
+}
+
+/* ----------------- */
+#particles-js {
+    z-index: 0 !important;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100vh;
+}

@@ -1,0 +1,9 @@
+@media only screen and (max-width:768px) {
+    .stop {
+        top: 5%;
+    }
+
+    .thumbnail {
+        width: 50%;
+    }
+}
