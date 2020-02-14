@@ -22,19 +22,19 @@ $.each(option, function (i, e) {
                 currPlay = i;
             }
         }
+        currPlay = AutoNext(audio, currPlay);
     });
 });
 
 //Auto next
-// console.log(currPlay);
-// if (currPlay != null && currPlay < option.length) {
-//     if (audio[currPlay].ended) {
-//         console.log('ended');
-//         currPlay = currPlay + 1;
-//         audio[currPlay].load();
-//         audio[currPlay].play();
-//     }
-// }
+function AutoNext(audio, curr) {
+    $(audio[curr]).on('ended', function () {
+        curr = curr + 1;
+        audio[curr].play();
+    });
+
+    return curr;
+}
 
 //Press to Stop
 $("#stopButton").click(function () {
