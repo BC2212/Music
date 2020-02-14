@@ -10,14 +10,24 @@
 
 @keyframes gradient {
     0% {
-        background-position: 0 200%
+        background-position: 0 50%;
     }
 
     50% {
-        background-position: 300% 200%
+        background-position: 100% 50%;
     }
 
     100% {
-        background-position: 0 200%
+        background-position: 0 50%;
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
     }
 }

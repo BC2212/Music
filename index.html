@@ -38,9 +38,9 @@
 <body>
   <div class="blackscreen"></div>
 
-  <div id="particles-js" class="position-absolute"></div>
+  <div id="particles-js" class="position-fixed"></div>
 
-  <div class="container-fluid text-center bg-transparent position-absolute">
+  <div class="container-fluid text-center bg-transparent position-fixed">
     <div class="content-wrapper">
       <div class="row justify-content-center">
         <div class="col-xl-6 col-lg col-md col-sm col">
@@ -53,7 +53,6 @@
               <div class="row">
                 <div class="slider-wrap">
                   <div class="slider" id="slider1"></div>
-                  <audio class="audio" id="audio1" src="media/audio/endless love.mp3" loop></audio>
                 </div>
               </div>
             </div>
@@ -66,7 +65,6 @@
               <div class="row">
                 <div class="slider-wrap">
                   <div class="slider" id="slider2"></div>
-                  <audio class="audio" id="audio2" src="media/audio/for the love of a princess.mp3" loop></audio>
                 </div>
               </div>
             </div>
@@ -81,7 +79,6 @@
               <div class="row">
                 <div class="slider-wrap">
                   <div class="slider" id="slider3"></div>
-                  <audio class="audio" id="audio3" src="media/audio/Leave Her Johnny.mp3" loop></audio>
                 </div>
               </div>
             </div>
@@ -94,7 +91,6 @@
               <div class="row">
                 <div class="slider-wrap">
                   <div class="slider" id="slider4"></div>
-                  <audio class="audio" id="audio4" src="media/audio/vague hope.mp3" loop></audio>
                 </div>
               </div>
             </div>
@@ -106,10 +102,30 @@
 
   <div class="stop" id="stopButton"></div>
 
+  <div class="playlist col-xl-4 mh-100">
+    <div class="row song" id="a0">
+      <h3>Endless love</h3>
+
+      <audio src="media/audio/endless love.mp3"></audio>
+    </div>
+    <div class="row song">
+      <h3>For the love of a princess</h3>
+      <audio src="media/audio/for the love of a princess.mp3"></audio>
+    </div>
+    <div class="row song">
+      <h3>Leave her Johnny</h3>
+
+      <audio src="media/audio/Leave Her Johnny.mp3"></audio>
+    </div>
+    <div class="row song">
+      <h3>Vague hope</h3>
+      <audio src="media/audio/vague hope.mp3"></audio>
+    </div>
+  </div>
 
   <script src="js/particles.js"></script>
   <script src="js/app.js"></script>
-
+  <script src="js/audio controls.js"></script>
   <script src="js/slider.js"></script>
 
 </body>
