@@ -22,18 +22,19 @@ $.each(option, function (i, e) {
                 currPlay = i;
             }
         }
-        currPlay = AutoNext(audio, currPlay);
+        AutoNext(currPlay);
     });
 });
 
 //Auto next
-function AutoNext(audio, curr) {
-    $(audio[curr]).on('ended', function () {
-        curr = curr + 1;
-        audio[curr].play();
-    });
-
-    return curr;
+function AutoNext(curr) {
+    if (curr != option.length) {
+        $(audio[curr]).on('ended', function () {
+            curr = curr + 1;
+            audio[curr].play();
+            AutoNext(curr);
+        });
+    }
 }
 
 //Press to Stop
